@@ -1,1 +1,1 @@
-react_inline_styling
+react inline styling
