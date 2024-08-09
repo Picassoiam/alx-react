@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class NotificationItem extends React.PureComponent {
   render() {
@@ -17,22 +17,18 @@ class NotificationItem extends React.PureComponent {
   }
 }
 
-NotificationItem.propTypes = {
-  type: PropTypes.string.isRequired,
-  value: PropTypes.string,
-  __html: PropTypes.shape({
-    html: PropTypes.string,
-  }),
-  markAsRead: PropTypes.func,
-  id: PropTypes.number,
+NotificationItem.defaultProps = {
+  type: 'default',
+  markAsRead: () => {console.log('empty func');},
+	id: 0
 };
 
-NotificationItem.defaultProps = {
-  type: "default",
-  markAsRead: () => {
-    console.log("empty func");
-  },
-  id: 0,
+NotificationItem.propTypes = {
+  html: PropTypes.shape({__html: PropTypes.string}),
+  type: PropTypes.string.isRequired,
+  value: PropTypes.string,
+  markAsRead: PropTypes.func,
+  id: PropTypes.number
 };
 
 export default NotificationItem;

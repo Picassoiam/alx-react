@@ -1,6 +1,6 @@
-import React from "react";
-import logo from "../assets/holberton-logo.jpg";
-import { StyleSheet, css } from "aphrodite";
+import React from 'react';
+import logo from '../assets/holberton_logo.jpg';
+import { css, StyleSheet } from 'aphrodite';
 
 function Header() {
   return (
@@ -10,7 +10,7 @@ function Header() {
         <h1>School dashboard</h1>
       </div>
     </>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
